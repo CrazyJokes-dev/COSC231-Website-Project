@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Buying/Bidding Website</title>
+<meta charset="utf-8">
+<style>
+body { font-family: Verdana, Arial, sans-serif;
+	   margin: 0; }
+	   
+header { font-size: 120%;
+		 text-align: center;
+		 background-color: #041200;
+		 color: white;}
+
+
+/* Grid Areas */
+
+header { grid-area: header; }
+nav { grid-area: nav;}
+main { grid-area: main;
+		width: 100%; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+#wrapper { display: grid;
+			   grid-template:
+				"header		header		header" 100px
+				"nav		nav			nav" auto
+				"main		main		main" auto
+				"footer		footer		footer" 50px
+				/ 250px		1fr			250px; }
+
+/* End of normal Grid Area */
+
+table { width: 100%;
+		margin-top: 30px; }
+
+.th_LEFT { text-align: right; }
+
+/* Search Bar CSS */
+	
+	#searchSize { 
+	  width: 800px;
+	  height: 25px;
+	}
+	
+	.search-container input[type=text] {
+	  padding: 6px;
+	  margin-top: 8px;
+	  font-size: 17px;
+	  border: none;
+	}
+
+	.search-container button {
+	  height: 37px;
+	  padding: 6px;
+	  margin-left: -6.5px;
+	  background: #ddd;
+	  font-size: 17px;
+	  border: none;
+	  cursor: pointer;
+	}
+
+	.search-container button:hover {
+	  background: #ccc;
+	}
+
+
+/* End of Search Bar CSS */
+
+h1 { margin-top: 75px; }
+
+#slideshow { margin-top: 125px;
+			 margin-bottom: 125px; }
+
+nav { font-size: 95%;
+	  background-color: #34a3ff;
+	  font-weight: bold; }
+
+nav ul { list-style-type: none;
+		 display: flex; 
+		 flex-direction: row; 
+		 flex-wrap: wrap; 
+		 justify-content: space-around; }
+
+nav a {text-decoration: none; }
+nav a:link { color: #ADD8E6 }
+nav a:visited { color: #800000; }
+nav a:hover { color: orange; }
+
+main { background-color: white;
+	   text-align: center; }
+
+footer{ background-color: #041200;
+		color: white;
+		text-align: center; }
+ 
+		 
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<table>
+			<tr>
+				<th style="padding-left: 80px;">LOGO</th>
+				<th>
+					
+					<div class="search-container">
+						<form>
+						<input id="searchSize" type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+						</form>
+					</div>	
+					
+				</th> <!-- MAY OR MAY NOT WORK -->
+				
+				<th style="padding-right: 70px">Stuff on the right</th>
+			<tr>
+		</table>
+	<!--  Maybe a table will work better since that's what eBay uses
+		<h1>LOGO</h1>
+		<h1>SEARCH BAR</h1> /* MAY OR MAY NOT WORK */
+		<h1>stuff on the right</h1> -->
+	</header>
+
+	<nav>
+	 <ul>
+		<li><a href="">Just</a></li>
+		<li><a href="">Random</a></li>
+		<li><a href="">Words</a></li>
+	 </ul>
+	</nav>
+	
+	<main>
+		<h1>Honestly just testing</h1>
+		<p>Yea it's just here until I get things setup</p>
+		
+		<div id="slideshow">
+			<h1>Gonna use this area to setup</h1>
+			<p>the slideshow where it fades into the rest of the webpage from the bottom <br> (From amazon.com)</p>
+		</div>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+	</main>
+	
+	
+	<footer>
+		<p>estefan@valencia.com</p>
+	</footer>
+</div>
+</body>
+</html>
