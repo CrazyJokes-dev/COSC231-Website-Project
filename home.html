@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Buying/Bidding Website</title>
-<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body { font-family: Verdana, Arial, sans-serif;
 	   margin: 0; }
@@ -67,10 +67,69 @@ table { width: 100%;
 
 /* End of Search Bar CSS */
 
-h1 { margin-top: 75px; }
+/* Beginning of Slideshow CSS */
 
-#slideshow { margin-top: 125px;
-			 margin-bottom: 125px; }
+
+
+.slideshow { max-width: 1000px;
+			 position: relative;
+			 margin: auto; }
+
+.mySlides { display: none; }  /* Hide images by default */
+
+img { vertical-align: middle; }
+
+	/* Next and previous buttons */
+.prev, .next { cursor: pointer;
+			   position: absolute;
+			   top: 50%;
+			   width: auto;
+			   margin-top: -22px;
+			   padding: 16px;
+			   color: red;
+			   font-weight: bold;
+			   font-size: 18px;
+			   transition: 0.6s ease;
+			   border-radius: 0 3px 3px 0;
+			   user-select: none; }
+
+	/* Position "next" button to the right */
+.next { right: 0;
+		border-radius: 3px 0 0 3px; }
+
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+
+	/* The dots/bullets/indicators */
+.dot { cursor: pointer;
+	   height: 15px;
+	   width: 15px;
+	   margin: 0 2px;
+	   background-color: #bbb;
+	   border-radius: 50%;
+	   display: inline-block;
+	   transition: background-color 0.6s ease; }
+	   
+.active, .dot:hover { background-color: #717171; }
+
+	/* Fading animation */
+.fade { -webkit-animation-name: fade;
+	    -webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s; }
+		
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+
+/* End of Slideshow CSS */
 
 nav { font-size: 95%;
 	  background-color: #34a3ff;
@@ -93,11 +152,8 @@ main { background-color: white;
 footer{ background-color: #041200;
 		color: white;
 		text-align: center; }
+		
 
-/* Submit Button*/
-#submit{
-	visibility: hidden;
-}
  
 		 
 </style>
@@ -113,7 +169,7 @@ footer{ background-color: #041200;
 					<div class="search-container">
 						<form>
 						<input id="searchSize" type="text" placeholder="Search.." name="search">
-						<button type="submit" id= "submit">Submit</button>
+						<button type="submit">Submit</button>
 						</form>
 					</div>	
 					
@@ -136,10 +192,66 @@ footer{ background-color: #041200;
 		<h1>Honestly just testing</h1>
 		<p>Yea it's just here until I get things setup</p>
 		
-		<div id="slideshow">
-			<h1>Gonna use this area to setup</h1>
-			<p>the slideshow where it fades into the rest of the webpage from the bottom <br> (From amazon.com)</p>
+		
+		<!-- SLIDESHOW -->
+		<div class="slideshow">
+		
+			<!-- Full width images with numbers and captions -->
+			<div class="mySlides fade">
+				<img src="img1.jpg" style="width: 100%">
+			</div>
+			
+			<div class="mySlides fade">
+				<img src="img2.jpg" style="width: 100%">
+			</div>
+			
+			<div class="mySlides fade">
+				<img src="img3.jpg" style="width: 100%">
+			</div>
+			
+			<!-- Now for the buttons -->
+			<a class="prev" style="margin-left: -255px;" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" style="margin-right: 245px;" onclick="plusSlides(1)">&#10095;</a>
 		</div>
+		
+		<!-- the dots/circles -->
+		<div style="text-align: center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+		
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i=0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+			
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+		<!-- END SLIDESHOW -->
 		
 		<h1>This is so I can set</h1>
 		<p>the size of main to "auto"</p>
