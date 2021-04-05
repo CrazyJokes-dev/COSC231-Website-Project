@@ -10,6 +10,7 @@ the javascript files we will use will be under "..public/js" (Not added since no
 *********************************************************************
 
 The package.json file is for Node.js to know which plugins/add-ons we will use
+
 The package-lock.json file is also only for Node.js
 
 
