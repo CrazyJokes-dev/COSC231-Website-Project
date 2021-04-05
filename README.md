@@ -15,13 +15,13 @@ The package-lock.json file is also only for Node.js
 
 To configure this on your PC please watch this video in its entirety
       
-      https://www.youtube.com/watch?v=A01KtJTv1oc 
+https://www.youtube.com/watch?v=A01KtJTv1oc 
 
 
 
 You can also look at the guys blog where he wrote down everything you need to do
     
-    https://raddy.co.uk/blog/nodejs-setup-with-html-css-js-ejs/
+https://raddy.co.uk/blog/nodejs-setup-with-html-css-js-ejs/
 
 
 *********************************************************************
