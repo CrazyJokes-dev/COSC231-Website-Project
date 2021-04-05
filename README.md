@@ -25,6 +25,6 @@ You can also look at the guys blog where he wrote down everything you need to do
 
 
 *********************************************************************
-To load the pages open up powershell or terminal where README.md is and put in "npm start"
+To load website, open up powershell or terminal where README.md is and put in "npm start"
 
 Then go to "localhost:3000" to see the website
