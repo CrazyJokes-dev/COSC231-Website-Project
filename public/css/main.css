@@ -1,0 +1,151 @@
+body { font-family: Verdana, Arial, sans-serif;
+	   margin: 0; }
+	   
+header { font-size: 120%;
+		 text-align: center;
+		 background-color: #041200;
+		 color: white;}
+
+
+/* Grid Areas */
+
+header { grid-area: header; }
+nav { grid-area: nav;}
+main { grid-area: main;
+		width: 100%; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+#wrapper { display: grid;
+			   grid-template:
+				"header		header		header" 100px
+				"nav		nav			nav" auto
+				"main		main		main" auto
+				"footer		footer		footer" 50px
+				/ 250px		1fr			250px; }
+
+/* End of normal Grid Area */
+
+table { width: 100%;
+		margin-top: 30px; }
+
+.th_LEFT { text-align: right; }
+
+/* Search Bar CSS */
+	
+	#searchSize { 
+	  width: 800px;
+	  height: 25px;
+	}
+	
+	.search-container input[type=text] {
+	  padding: 6px;
+	  margin-top: 8px;
+	  font-size: 17px;
+	  border: none;
+	}
+
+	.search-container button {
+	  height: 37px;
+	  padding: 6px;
+	  margin-left: -6.5px;
+	  background: #ddd;
+	  font-size: 17px;
+	  border: none;
+	  cursor: pointer;
+	}
+
+	.search-container button:hover {
+	  background: #ccc;
+	}
+
+
+/* End of Search Bar CSS */
+
+/* Beginning of Slideshow CSS */
+
+
+
+.slideshow { max-width: 1000px;
+			 position: relative;
+			 margin: auto; }
+
+.mySlides { display: none; }  /* Hide images by default */
+
+img { vertical-align: middle; }
+
+	/* Next and previous buttons */
+.prev, .next { cursor: pointer;
+			   position: absolute;
+			   top: 50%;
+			   width: auto;
+			   margin-top: -22px;
+			   padding: 16px;
+			   color: red;
+			   font-weight: bold;
+			   font-size: 18px;
+			   transition: 0.6s ease;
+			   border-radius: 0 3px 3px 0;
+			   user-select: none; }
+
+	/* Position "next" button to the right */
+.next { right: 0;
+		border-radius: 3px 0 0 3px; }
+
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+
+	/* The dots/bullets/indicators */
+.dot { cursor: pointer;
+	   height: 15px;
+	   width: 15px;
+	   margin: 0 2px;
+	   background-color: #bbb;
+	   border-radius: 50%;
+	   display: inline-block;
+	   transition: background-color 0.6s ease; }
+	   
+.active, .dot:hover { background-color: #717171; }
+
+	/* Fading animation */
+.fade { -webkit-animation-name: fade;
+	    -webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s; }
+		
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+
+/* End of Slideshow CSS */
+
+nav { font-size: 95%;
+	  background-color: #34a3ff;
+	  font-weight: bold; }
+
+nav ul { list-style-type: none;
+		 display: flex; 
+		 flex-direction: row; 
+		 flex-wrap: wrap; 
+		 justify-content: space-around; }
+
+nav a {text-decoration: none; }
+nav a:link { color: #ADD8E6 }
+nav a:visited { color: #800000; }
+nav a:hover { color: orange; }
+
+table a:link { color: grey; }
+table a:visited { color: grey; }
+
+main { background-color: white;
+	   text-align: center; }
+
+footer{ background-color: #041200;
+		color: white;
+		text-align: center; }

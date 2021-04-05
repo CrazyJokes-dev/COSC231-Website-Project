@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Buying/Bidding Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<table>
+			<tr>
+				<th style="padding-left: 150px;">LOGO</th>
+				<th style="padding-left: 50px;">
+					
+					<div class="search-container">
+						<form>
+						<input id="searchSize" type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+						</form>
+					</div>	
+					
+				</th> <!-- MAY OR MAY NOT WORK -->
+				
+				<th style="padding-right: 90px;"><a href="/sign-in">Sign In</a></th>
+				
+				<th style="padding-right: 110px;"><a href="/sign-up">Sign Up</a></th>
+			<tr>
+		</table>
+	</header>
+
+	<nav>
+	 <ul>
+		<li><a href="">Just</a></li>
+		<li><a href="">Random</a></li>
+		<li><a href="">Words</a></li>
+	 </ul>
+	</nav>
+	
+	<main>
+		<h1>Honestly just testing</h1>
+		<p>Yea it's just here until I get things setup</p>
+		
+		<h2>
+			<%= text %>
+		</h2>
+		
+		<!-- SLIDESHOW -->
+		<div class="slideshow">
+		
+			<!-- Full width images with numbers and captions -->
+			<div class="mySlides fade">
+				<img src="img/TestPicture.jpg" style="width: 100%">
+			</div>
+			
+			<div class="mySlides fade">
+				<img src="img2.jpg" style="width: 100%">
+			</div>
+			
+			<div class="mySlides fade">
+				<img src="img3.jpg" style="width: 100%">
+			</div>
+			
+			<!-- Now for the buttons -->
+			<a class="prev" style="margin-left: -255px;" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" style="margin-right: 245px;" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		
+		<!-- the dots/circles -->
+		<div style="text-align: center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+		
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i=0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+			
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+		<!-- END SLIDESHOW -->
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+		
+		<h1>This is so I can set</h1>
+		<p>the size of main to "auto"</p>
+	</main>
+	
+	
+	<footer>
+		<p>estefan@valencia.com</p>
+	</footer>
+</div>
+</body>
+</html>
