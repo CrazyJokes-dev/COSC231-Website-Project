@@ -17,13 +17,12 @@
 
 					
 					<div class="search-container">
-						<form>
-						<input type="text" placeholder="Search Categories..." id="searchSize" name="searchSize">
+						<form action="http://localhost/search.php" method="post">
+						<button class="dropbtn">Categories</button>
 						<div class="dropdown-content">
-							<a href="#">Clothing</a>
-							<a href="#">Electronics</a>
+							<a href="/clothing">Clothing</a>
+							<a href="/electronic">Electronics</a>
 						</div>
-						<button type="submit">Submit</button>
 						</form>
 					</div>
 					
@@ -38,9 +37,9 @@
 
 	<nav>
 	 <ul>
-		<li><a href="">Just</a></li>
-		<li><a href="">Random</a></li>
-		<li><a href="">Words</a></li>
+		<li><a href="/">Home</a></li>
+		<li><a href="/electronic">Electronics</a></li>
+		<li><a href="/clothing">Clothing</a></li>
 	 </ul>
 	</nav>
 	
