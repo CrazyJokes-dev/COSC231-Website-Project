@@ -14,7 +14,7 @@ app.use('/img', express.static(__dirname + 'public/img'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
 	res.render('home', { text: 'Home Page'})
 })
 
@@ -26,7 +26,13 @@ app.get('/sign-up', (req, res) => {
 	res.render('SignUp', { text: 'Sign Up Page'})
 })
 
+app.get('/electronic', (req, res) => {
+	res.render('electronic', { text: 'Electronic Page'})
+})
 
+app.get('/clothing', (req, res) => {
+	res.render('clothing', { text: 'Electronic Page'})
+})
 
 // Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))
