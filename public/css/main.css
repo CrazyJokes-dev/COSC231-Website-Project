@@ -44,7 +44,7 @@ table { width: 100%;
 	  border: none;
 	}
 
-	.search-container button {
+	.search-container input[type=submit] {
 	  height: 37px;
 	  padding: 6px;
 	  margin-left: -6.5px;
@@ -57,7 +57,6 @@ table { width: 100%;
 	.search-container button:hover {
 	  background: #ccc;
 	}
-
 
 /* End of Search Bar CSS */
 
@@ -124,6 +123,48 @@ img { vertical-align: middle; }
 
 
 /* End of Slideshow CSS */
+
+
+
+/* Dropdown menu CSS */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  text-align: left;
+  position: absolute;
+  background-color: #f1f1f1;
+  margin-left: 161px;
+  min-width: 700px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.search-container:hover .dropdown-content {display: block;}
+
+.dropbtn {
+  background-color: #4CAF50;
+  text-align: center;
+  color: white;
+  padding: 16px;
+  margin-top: -10px;
+  font-size: 25px;
+  border: none;
+  width: 700px;
+}
+
+/* End of Dropdown menu CSS*/
 
 nav { font-size: 95%;
 	  background-color: #34a3ff;
