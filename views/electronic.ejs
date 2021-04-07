@@ -1,20 +1,19 @@
 <html lang="en">
   
 <head>
-    <meta charset="UTF-8">
-    <title>Electronic Items</title>
-  
-    <!-- include jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js">
-    </script>
-    <style>
-        table {
+<meta charset="UTF-8">
+<title>Electronic Items</title>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<style>
+	#table {
             margin: 0 auto;
             font-size: large;
             border: 1px solid black;
+			width: 1500px;
         }
   
-        h1 {
+        #table h1 {
             text-align: center;
             color: #006600;
             font-size: xx-large;
@@ -23,68 +22,90 @@
                 'Trebuchet MS', 'sans-serif';
         }
   
-        td {
+        #table td {
             background-color: #E4F5D4;
             border: 1px solid black;
+			text-align: center;
         }
-  
-        th,
-        td {
-            font-weight: bold;
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-  
-        td {
-            font-weight: lighter;
-        }
-    </style>
+</style>
+<link rel="stylesheet" href="css/main.css">
 </head>
-  
 <body>
-    <section>
-        <h1>Electronic Items</h1>
-  
-        <table id='table'>
-            <tr>
-                <th>Title</th>
-                <th>Url</th>
-                <th>Image</th>
-            </tr>
-  
-            <script>
+<div id="wrapper">
+	<header>
+		<table>
+			<tr>
+				<th style="padding-left: 150px; color: white; font-size: 150%;">LOGO</th>
+				<th style="padding-left: 50px;">
+
+					
+					<div class="search-container">
+						<form action="http://localhost/search.php" method="post">
+						<button class="dropbtn">Categories</button>
+						<div class="dropdown-content">
+							<a href="/clothing">Clothing</a>
+							<a href="/electronic">Electronics</a>
+						</div>
+						<!-- <input type="submit" value="Search"> -->
+						</form>
+					</div>
+					
+				</th> <!-- MAY OR MAY NOT WORK -->
+				
+				<th style="padding-right: 90px;"><a href="/sign-in">Sign In</a></th>
+				
+				<th style="padding-right: 110px;"><a href="/sign-up">Sign Up</a></th>
+			<tr>
+		</table>
+	</header>
+
+	<nav>
+	 <ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/electronic">Electronics</a></li>
+		<li><a href="/clothing">Clothing</a></li>
+	 </ul>
+	</nav>
+		 
+<main>
+	<table id='table'>
+			
+			
+			<script>
                 $(document).ready(function () {
   
                     // Getting data from json file   MUST BE HOSTED ON LOCAL SERVER
                     $.getJSON("http://localhost:4000/posts", 
                             function (data) {
-                        var student = '';
+                        var item = '';
   
                         // iterating through data in the json file
                         $.each(data, function (key, value) {
   
                             //making rows in the table
 							//using the data from the json file
-                            student += '<tr>';
-                            student += '<td>' + 
-                                value.title + '</td>';
+                            item += '<tr>';
+                            item += '<td>' +
+									'<img src="' + value.img + '" alt="item">' + '</td>';
   
-                            student += '<td>' + 
-                                value.url + '</td>';
-  
-                            student += '<td>' + 
-                                value.img + '</td>';
+                            item += '<td>' + 
+								'<a href="' + value.url + '">' + value.title + '</a>' + '</td>';
 							
-                            student += '</tr>';
+                            item += '</tr>';
                         });
                           
                         //adding rows into the html
-                        $('#table').append(student);
+                        $('#table').append(item);
                     });
                 });
             </script>
-    </section>
+		</table>	
+</main>
+
+<footer>
+		<p>estefan@valencia.com</p>
+</footer>
+</div>	
 </body>
-  
+   
 </html>
