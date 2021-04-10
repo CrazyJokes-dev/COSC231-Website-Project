@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/main.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -13,13 +14,17 @@
 			<tr>
 				<th style="padding-left: 150px;">LOGO</th>
 				<th style="padding-left: 50px;">
+
 					
 					<div class="search-container">
-						<form>
-						<input id="searchSize" type="text" placeholder="Search.." name="search">
-						<button type="submit">Submit</button>
+						<form action="http://localhost/search.php" method="post">
+						<button class="dropbtn">Categories</button>
+						<div class="dropdown-content">
+							<a href="/clothing">Clothing</a>
+							<a href="/electronic">Electronics</a>
+						</div>
 						</form>
-					</div>	
+					</div>
 					
 				</th> <!-- MAY OR MAY NOT WORK -->
 				
@@ -32,9 +37,9 @@
 
 	<nav>
 	 <ul>
-		<li><a href="">Just</a></li>
-		<li><a href="">Random</a></li>
-		<li><a href="">Words</a></li>
+		<li><a href="/">Home</a></li>
+		<li><a href="/electronic">Electronics</a></li>
+		<li><a href="/clothing">Clothing</a></li>
 	 </ul>
 	</nav>
 	
@@ -42,9 +47,6 @@
 		<h1>Honestly just testing</h1>
 		<p>Yea it's just here until I get things setup</p>
 		
-		<h2>
-			<%= text %>
-		</h2>
 		
 		<!-- SLIDESHOW -->
 		<div class="slideshow">
@@ -106,11 +108,11 @@
 		</script>
 		<!-- END SLIDESHOW -->
 		
-		<h1>This is so I can set</h1>
-		<p>the size of main to "auto"</p>
+		<h1>Electronic Category</h1>
+		<p>List of items</p>
 		
-		<h1>This is so I can set</h1>
-		<p>the size of main to "auto"</p>
+		<h1>Clothing Category</h1>
+		<p>list of items</p>
 		
 		<h1>This is so I can set</h1>
 		<p>the size of main to "auto"</p>

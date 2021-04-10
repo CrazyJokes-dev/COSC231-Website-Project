@@ -20,7 +20,7 @@ app.use(express.urlencoded({
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
 	res.render('home', { text: 'Home Page'})
 })
 
@@ -49,7 +49,13 @@ app.post('/SignUp', urlencodedParser,[
 	}
 })
 
+app.get('/electronic', (req, res) => {
+	res.render('electronic', { text: 'Electronic Page'})
+})
 
+app.get('/clothing', (req, res) => {
+	res.render('clothing', { text: 'Electronic Page'})
+})
 
 // Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))
