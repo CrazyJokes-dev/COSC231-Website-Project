@@ -5,15 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
     "website": "npm-run-all -p app",
-	"jsonTech": "json-server --watch item-data/techList.json --port 4000",
-	"jsonClothing": "json-server --watch item-data/clothingList.json --port 5000",
-	
-	"app": "nodemon app.js",
-	
-	"elec": "nodemon public/js/electronicList.js",
-	"clothing": "nodemon public/js/clothingList.js"
+    "jsonTech": "json-server --watch item-data/techList.json --port 4000",
+    "jsonClothing": "json-server --watch item-data/clothingList.json --port 5000",
+    "app": "nodemon app.js",
+    "elec": "nodemon public/js/electronicList.js",
+    "clothing": "nodemon public/js/clothingList.js"
   },
   "author": "",
   "license": "ISC",
