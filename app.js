@@ -36,6 +36,8 @@ app.post('/SignUp', urlencodedParser,[
 	check('email','Email is not valid')
 		.isEmail()
 		.normalizeEmail()
+	
+	
 ], (req, res)=> {
 	const errors = validationResult(req)
 	if(!errors.isEmpty()){
@@ -44,9 +46,24 @@ app.post('/SignUp', urlencodedParser,[
 		res.render('SignUp',{
 			alertdisplay
 		})
-	} else {
-		
-	}
+	} 
+})
+
+app.post('/SignIn', urlencodedParser,[
+	check('email','Email is not valid')
+		.isEmail()
+		.normalizeEmail()
+	
+	
+], (req, res)=> {
+	const errors = validationResult(req)
+	if(!errors.isEmpty()){
+		//return res.status(422).jsonp(errors.array())
+		const alertdisplay = errors.array()
+		res.render('SignIn',{
+			alertdisplay
+		})
+	} 
 })
 
 app.get('/electronic', (req, res) => {
