@@ -25,11 +25,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/SignIn', (req, res) => {
-	res.render('SignIn', { text: 'Sign In Page'})
+	res.render('SignIn.ejs', { text: 'Sign In Page'})
 })
 
 app.get('/SignUp', (req, res) => {
-	res.render('SignUp', { text: 'Sign Up Page'})
+	res.render('SignUp.ejs', { text: 'Sign Up Page'})
 })
 
 app.post('/SignUp', urlencodedParser,[
