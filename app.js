@@ -32,6 +32,10 @@ app.get('/SignUp', (req, res) => {
 	res.render('SignUp.ejs', { text: 'Sign Up Page'})
 })
 
+app.get('/cart', (req, res) => {
+	res.render('cart.ejs', {text: 'Cart'})
+})
+
 app.post('/SignUp', urlencodedParser,[
 	check('email','Email is not valid')
 		.isEmail()
