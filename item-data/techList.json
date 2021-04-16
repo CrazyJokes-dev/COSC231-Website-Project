@@ -2,27 +2,27 @@
 	"posts": [
     {
         "title": "All-in-one Device Package",
-        "url": "img/tech1.jpg",
+        "url": "/tech1",
         "img": "img/tech1.jpg"
     },
     {
         "title": "Headphone and iPhone 13",
-        "url": "img/tech2.jpg",
+        "url": "/tech2",
         "img": "img/tech2.jpg"
     },
     {
         "title": "Circuits and Wiring",
-        "url": "img/circuits1.jpg",
+        "url": "/circuits1",
         "img": "img/circuits1.jpg"
     },
     {
         "title": "Motherboard for you PC",
-        "url": "img/circuits2.jpg",
+        "url": "/circuits2",
         "img": "img/circuits2.jpg"
     },
     {
         "title": "Bowling Pin Looking Drone",
-        "url": "img/drone1.jpg",
+        "url": "/drone",
         "img": "img/drone1.jpg"
     }
   ]
