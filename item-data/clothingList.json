@@ -2,27 +2,27 @@
    "posts": [
     {
         "title": "Pants Pockets for sale",
-        "url": "img/tech1.jpg",
+        "url": "img/clothing1.jpg",
         "img": "img/clothing1.jpg"
     },
     {
         "title": "Big Variety of shirts",
-        "url": "/Gildan-Mens-T-Shirt-Assortment-Large/dp/B0787P86ZZ/ref=sr_1_1?dchild=1&keywords=shirts&qid=1617736969&sr=8-1",
+        "url": "img/clothing2.jpg",
         "img": "img/clothing2.jpg"
     },
     {
         "title": "Amazing Looking Shoes",
-        "url": "/Gildan-Mens-T-Shirt-Assortment-Large/dp/B0787P86ZZ/ref=sr_1_1?dchild=1&keywords=shirts&qid=1617736969&sr=8-1",
+        "url": "img/clothing3.jpg",
         "img": "img/clothing3.jpg"
     },
     {
         "title": "Glow-in-the-dark Blue Shoes",
-        "url": "/Gildan-Mens-T-Shirt-Assortment-Large/dp/B0787P86ZZ/ref=sr_1_1?dchild=1&keywords=shirts&qid=1617736969&sr=8-1",
+        "url": "img/clothing4.jpg",
         "img": "img/clothing4.jpg"
     },
     {
         "title": "The Coolest Sunglasses To Ever Exist",
-        "url": "/Gildan-Mens-T-Shirt-Assortment-Large/dp/B0787P86ZZ/ref=sr_1_1?dchild=1&keywords=shirts&qid=1617736969&sr=8-1",
+        "url": "img/clothing5.jpg",
         "img": "img/clothing5.jpg"
     }
   ]
