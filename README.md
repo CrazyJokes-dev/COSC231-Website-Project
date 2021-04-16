@@ -26,6 +26,17 @@ https://raddy.co.uk/blog/nodejs-setup-with-html-css-js-ejs/
 
 
 *********************************************************************
-To load website, open up powershell or terminal where README.md is and put in "npm start"
+To load website, open up powershell or terminal where README.md is and put in what's listed below to get the site FULLY working
+
+npm run app <-- This opens up the website
+
+Open up another powershell window or terminal
+npm run jsonTech <-- This gets the electronic list going
+
+Open up another powershell window or terminal
+npm run jsonClothing <-- This gets the clothing list going
+
 
 Then go to "localhost:3000" to see the website
+
+if you want, you can go to "localhost:4000" and "localhost:5000" to see the lists (You really don't have to go to these though)
