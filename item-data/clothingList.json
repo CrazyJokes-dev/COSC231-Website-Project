@@ -2,27 +2,27 @@
    "posts": [
     {
         "title": "Pants Pockets for sale",
-        "url": "img/clothing1.jpg",
+        "url": "/clothing-product1",
         "img": "img/clothing1.jpg"
     },
     {
         "title": "Big Variety of shirts",
-        "url": "img/clothing2.jpg",
+        "url": "/clothing-product2",
         "img": "img/clothing2.jpg"
     },
     {
         "title": "Amazing Looking Shoes",
-        "url": "img/clothing3.jpg",
+        "url": "/clothing-product3",
         "img": "img/clothing3.jpg"
     },
     {
         "title": "Glow-in-the-dark Blue Shoes",
-        "url": "img/clothing4.jpg",
+        "url": "/clothing-product4",
         "img": "img/clothing4.jpg"
     },
     {
         "title": "The Coolest Sunglasses To Ever Exist",
-        "url": "img/clothing5.jpg",
+        "url": "/clothing-product5",
         "img": "img/clothing5.jpg"
     }
   ]
