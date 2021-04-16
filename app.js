@@ -78,5 +78,45 @@ app.get('/clothing', (req, res) => {
 	res.render('clothing', { text: 'Electronic Page'})
 })
 
+app.get('/tech1', (req, res) => {
+	res.render('techProduct1', { text: 'Electronic Page'})
+})
+
+app.get('/tech2', (req, res) => {
+	res.render('techProduct2', { text: 'Electronic Page'})
+})
+
+app.get('/circuits1', (req, res) => {
+	res.render('circuitProduct1', { text: 'Electronic Page'})
+})
+
+app.get('/circuits2', (req, res) => {
+	res.render('circuitProduct2', { text: 'Electronic Page'})
+})
+
+app.get('/drone', (req, res) => {
+	res.render('droneProduct', { text: 'Electronic Page'})
+})
+
+app.get('/clothing-product1', (req, res) => {
+	res.render('clothingProduct1', { text: 'Electronic Page'})
+})
+
+app.get('/clothing-product2', (req, res) => {
+	res.render('clothingProduct2', { text: 'Electronic Page'})
+})
+
+app.get('/clothing-product3', (req, res) => {
+	res.render('clothingProduct3', { text: 'Electronic Page'})
+})
+
+app.get('/clothing-product4', (req, res) => {
+	res.render('clothingProduct4', { text: 'Electronic Page'})
+})
+
+app.get('/clothing-product5', (req, res) => {
+	res.render('clothingProduct5', { text: 'Electronic Page'})
+})
+
 // Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))
