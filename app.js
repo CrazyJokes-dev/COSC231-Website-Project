@@ -1,8 +1,11 @@
 // Imports
 const express = require('express')
+const fs = require("fs")
 const{check, validationResult} = require('express-validator')
 const app = express()
 const port = 3000
+
+app.use(express.json())
 const urlencodedParser = express.urlencoded({extended: false})
 
 
@@ -50,6 +53,26 @@ app.post('/SignUp', urlencodedParser,[
 		res.render('SignUp',{
 			alertdisplay
 		})
+	} else {
+		const {body} = req;
+		let userArray = {};
+
+		fs.readFile('./userData.json', (err, data) => {
+			if (err) {
+			  console.error(err)
+			  return
+			}
+			const jsonData = JSON.parse(data);
+			userArray = jsonData;
+			userArray.users.push(body);
+			console.log(JSON.stringify(userArray))
+			fs.writeFile('./userData.json', JSON.stringify(userArray), function (err) {
+				if (err) throw err;
+				res.render("SignIn")
+			 });
+		  })
+
+
 	} 
 })
 
