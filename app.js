@@ -25,7 +25,7 @@ app.set('views', './views')
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-	res.render('home', { text: 'Home Page'})
+	res.render('home', { text: 'Home Page', userLogged})
 })
 
 app.get('/SignIn', (req, res) => {
@@ -37,7 +37,7 @@ app.get('/SignUp', (req, res) => {
 })
 
 app.get('/cart', (req, res) => {
-	res.render('cart.ejs', {text: 'Cart'})
+	res.render('cart.ejs', {text: 'Cart', userLogged})
 })
 
 app.post('/SignUp', urlencodedParser,[
@@ -72,8 +72,6 @@ app.post('/SignUp', urlencodedParser,[
 				res.render("SignIn")
 			 });
 		  })
-
-
 	} 
 })
 
@@ -106,7 +104,9 @@ app.post('/SignIn', urlencodedParser,[
 			console.log(JSON.stringify(userArray))
 			
 			if(userLogged != undefined) {
-				res.render('home');
+				res.render('home', {
+					userLogged
+				});
 			}
 		  })
 
@@ -115,51 +115,51 @@ app.post('/SignIn', urlencodedParser,[
 })
 
 app.get('/electronic', (req, res) => {
-	res.render('electronic', { text: 'Electronic Page'})
+	res.render('electronic', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/clothing', (req, res) => {
-	res.render('clothing', { text: 'Electronic Page'})
+	res.render('clothing', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/tech1', (req, res) => {
-	res.render('techProduct1', { text: 'Electronic Page'})
+	res.render('techProduct1', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/tech2', (req, res) => {
-	res.render('techProduct2', { text: 'Electronic Page'})
+	res.render('techProduct2', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/circuits1', (req, res) => {
-	res.render('circuitProduct1', { text: 'Electronic Page'})
+	res.render('circuitProduct1', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/circuits2', (req, res) => {
-	res.render('circuitProduct2', { text: 'Electronic Page'})
+	res.render('circuitProduct2', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/drone', (req, res) => {
-	res.render('droneProduct', { text: 'Electronic Page'})
+	res.render('droneProduct', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/clothing-product1', (req, res) => {
-	res.render('clothingProduct1', { text: 'Electronic Page'})
+	res.render('clothingProduct1', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/clothing-product2', (req, res) => {
-	res.render('clothingProduct2', { text: 'Electronic Page'})
+	res.render('clothingProduct2', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/clothing-product3', (req, res) => {
-	res.render('clothingProduct3', { text: 'Electronic Page'})
+	res.render('clothingProduct3', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/clothing-product4', (req, res) => {
-	res.render('clothingProduct4', { text: 'Electronic Page'})
+	res.render('clothingProduct4', { text: 'Electronic Page', userLogged})
 })
 
 app.get('/clothing-product5', (req, res) => {
-	res.render('clothingProduct5', { text: 'Electronic Page'})
+	res.render('clothingProduct5', { text: 'Electronic Page', userLogged})
 })
 
 // Listen on port 3000

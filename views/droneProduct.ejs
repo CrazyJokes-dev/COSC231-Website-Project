@@ -15,9 +15,12 @@
 	<header>
 		<table>
 			<tr>
-				<th style="padding-left: 150px;"><a href="/"><img src="img/logo.gif" \
-					alt="Niaves Logo" style="width:150px;height:100px;"></a>				<th style="padding-left: 50px;">
-
+				<% if(userLogged != undefined) { %>
+					<th style="padding-right: 30px; padding-left:10px;">Welcome <%=userLogged.name%></th>
+				<% } %>
+				<th style="padding-left: 90px;"><a href="/"><img src="img/logo.gif" \
+					alt="Niaves Logo" style="width:150px;height:100px;"></a>
+				<th style="padding-left: 50px;">
 					
 					<div class="search-container">
 						<form action="http://localhost/search.php" method="post">
@@ -32,9 +35,14 @@
 					
 				</th> <!-- MAY OR MAY NOT WORK -->
 				
-				<th style="padding-right: 90px;"><a href="/SignIn">Sign In</a></th>
+				<% if(userLogged != undefined) { %>
+					<th style="padding-right: 40px;"><a href="/SignIn">Sign Out</a></th>
+					<th style="padding-right: 40px;"><a href="/cart">Cart</a></th>
+				<% } else { %>
+				<th style="padding-right: 40px;"><a href="/SignIn">Sign In</a></th>
 				
-				<th style="padding-right: 110px;"><a href="/SignUp">Sign Up</a></th>
+				<th style="padding-right: 40px;"><a href="/SignUp">Sign Up</a></th>
+				<% } %>
 			<tr>
 		</table>
 	</header>
