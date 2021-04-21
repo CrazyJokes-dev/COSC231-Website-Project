@@ -15,13 +15,12 @@
 	<header>
 		<table>
 			<tr>
-				<th style="padding-left: 150px;"><a href="/"><img src="img/logo.gif" \
-					alt="Niaves Logo" style="width:150px;height:100px;"></a>
+				<th style="padding-left: 150px; color: white; font-size: 150%;">LOGO</th>
 				<th style="padding-left: 50px;">
 
 					
 					<div class="search-container">
-						<form action="http://localhost/search.php" method="post">
+						<form>
 						<button class="dropbtn">Categories</button>
 						<div class="dropdown-content">
 							<a href="/clothing">Clothing</a>
@@ -54,7 +53,9 @@
 	<br>
 	<h2>Description</h2>
 	<p>This set includes a pair of circuits and wires</p>
-	<button class="dropbtn" style="margin-top: 50px;">Buy</button>
+	<form action="/cart">
+	<button type="submit" id="product" name="product" value="Circuits and Wiring" style="background-color: green; margin-top: 50px; width: 200px; height: 50px; font-size: 170%;">Buy</button>
+	</form>
 </main>
 
 <footer>
