@@ -4,6 +4,7 @@ const fs = require("fs")
 const{check, validationResult} = require('express-validator')
 const app = express()
 const port = 3000
+let userLogged;
 
 app.use(express.json())
 const urlencodedParser = express.urlencoded({extended: false})
@@ -90,6 +91,26 @@ app.post('/SignIn', urlencodedParser,[
 		res.render('SignIn',{
 			alertdisplay
 		})
+	}else {
+		const {body} = req;
+		let userArray = {};
+
+		fs.readFile('./userData.json', (err, data) => {
+			if (err) {
+			  console.error(err)
+			  return
+			}
+			const jsonData = JSON.parse(data);
+			userArray = jsonData;
+			userLogged = userArray.users.find((user)=> user.email == body.email);
+			console.log(JSON.stringify(userArray))
+			
+			if(userLogged != undefined) {
+				res.render('home');
+			}
+		  })
+
+
 	} 
 })
 
