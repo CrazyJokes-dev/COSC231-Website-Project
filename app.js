@@ -100,13 +100,17 @@ app.post('/SignIn', urlencodedParser,[
 			}
 			const jsonData = JSON.parse(data);
 			userArray = jsonData;
-			userLogged = userArray.users.find((user)=> user.email == body.email);
+			userLogged = userArray.users.find((user)=> user.email == body.email); //userLogged has name of loggedin user
 			console.log(JSON.stringify(userArray))
 			
-			if(userLogged != undefined) {
+			if(userLogged != undefined)/*null*/ {
 				res.render('home', {
 					userLogged
 				});
+			} else {
+				res.render('SignIn', {
+					alertdisplay: [{"msg": "User is not registered with Niaves!"}]
+				})
 			}
 		  })
 
